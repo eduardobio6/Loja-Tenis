@@ -13,6 +13,7 @@ public class Categoria extends AbstractEntity{
 	@Column(name = "nm_categoria", length = 50)
 	private String nm_categoria;
 	
+	
 	public Categoria() {
 		
 	}

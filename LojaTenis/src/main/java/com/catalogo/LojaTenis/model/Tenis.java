@@ -2,6 +2,7 @@ package com.catalogo.LojaTenis.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +17,12 @@ public class Tenis extends AbstractEntity {
 	public Tenis () {
 		
 	}
-
+	
+	@ManyToOne
+	private Modelo modelo;
+	
+	@ManyToOne
+	private Categoria categoria;
 
 	public int getId_tamanhoTenis() {
 		return id_tamanhoTenis;

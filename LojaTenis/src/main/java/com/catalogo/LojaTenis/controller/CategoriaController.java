@@ -22,7 +22,7 @@ import com.catalogo.LojaTenis.service.CategoriaService;
 @RestController
 @RequestMapping("/categoria")
 public class CategoriaController implements ControllerInterface<Categoria> {
-
+	
 	@Autowired
 	private CategoriaService service;
 	
@@ -45,12 +45,12 @@ public class CategoriaController implements ControllerInterface<Categoria> {
 	
 	@Override
 	@PostMapping
-	public ResponseEntity<Categoria> post(@RequestBody Categoria obj){
+	public ResponseEntity<Categoria> post(@RequestBody Categoria categoria){
 		
-		service.create(obj);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
+		service.create(categoria);
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(categoria.getId()).toUri();
 		
-		return ResponseEntity.created(location).body(obj);
+		return ResponseEntity.created(location).body(categoria);
 	}
 	
 	@Override

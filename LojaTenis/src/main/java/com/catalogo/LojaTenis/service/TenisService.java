@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.catalogo.LojaTenis.model.Tenis;
 import com.catalogo.LojaTenis.repository.TenisRepository;
-
+@Service
 public class TenisService implements ServiceInterface<Tenis> {
 
 	@Autowired
