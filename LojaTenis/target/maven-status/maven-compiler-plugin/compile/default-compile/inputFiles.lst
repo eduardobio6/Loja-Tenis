@@ -1,24 +1,28 @@
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\UsuarioRepository.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\ControllerInterface.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Modelo.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Usuario.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\ModeloRepository.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\MarcaService.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\ModeloService.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\TenisRepository.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\ServiceInterface.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Categoria.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\MarcaRepository.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\LojaTenisApplication.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\CategoriaController.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\TenisService.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\ModeloController.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\UsuarioService.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Marca.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Tenis.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\CategoriaService.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\CategoriaRepository.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\MarcaController.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\AbstractEntity.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\TenisController.java
-C:\Users\carlo\OneDrive\Área de Trabalho\Projeto Loja Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\UsuarioController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\UsuarioService.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\S3Config.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\S3Service.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\LojaTenisApplication.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\CategoriaService.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\CategoriaRepository.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\MarcaController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\ModeloController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Modelo.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\UsuarioController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Marca.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\CategoriaController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Tenis.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\TenisRepository.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\Beanpublic.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\UsuarioRepository.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\MarcaService.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\ControllerInterface.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Usuario.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\MarcaRepository.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\AbstractEntity.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\ModeloService.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\TenisController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\model\Categoria.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\repository\ModeloRepository.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\controller\UploadController.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\TenisService.java
+C:\Users\Usuário\Documents\ProjetosWeb\Loja-Tenis\LojaTenis\src\main\java\com\catalogo\LojaTenis\service\ServiceInterface.java
