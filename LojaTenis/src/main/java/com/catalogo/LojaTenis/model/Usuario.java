@@ -9,41 +9,40 @@ import javax.persistence.Table;
 public class Usuario extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
-	
 	@Column(name = "nm_usuario", length = 60)
-	private String nm_usuario;
+	private String usuario;
 	@Column(name = "sg_senha", length = 14)
-	private String sg_senha;
-	@Column(name = "sg_nickUsuario", length = 11)
-	private String sg_nickUsuario;
-
+	private String senha;
+	@Column(name = "ds_cpf", length = 11)
+	private String cpf;
+	
 	public Usuario () {
 		
 	}
 
 
-	public String getNm_usuario() {
-		return nm_usuario;
+	public String getusuario() {
+		return usuario;
 	}
 
-	public void setNm_usuario(String nm_usuario) {
-		this.nm_usuario = nm_usuario;
+	public void setNm_usuario(String usuario) {
+		this.usuario = usuario;
 	}
 
-	public String getSg_senha() {
-		return sg_senha;
+	public String getsenha() {
+		return senha;
 	}
 
-	public void setSg_senha(String sg_senha) {
-		this.sg_senha = sg_senha;
+	public void setsenha(String senha) {
+		this.senha = senha;
 	}
 
-	public String getSg_nickUsuario() {
-		return sg_nickUsuario;
+	public String getcpf() {
+		return cpf;
 	}
 
-	public void setSg_nickUsuario(String sg_nickUsuario) {
-		this.sg_nickUsuario = sg_nickUsuario;
+	public void setpf(String cpf) {
+		this.cpf = cpf;
 	}
 	
 	

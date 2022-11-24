@@ -3,7 +3,11 @@ package com.catalogo.LojaTenis.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,20 +20,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.catalogo.LojaTenis.dto.ModeloDTO;
+import com.catalogo.LojaTenis.model.Categoria;
 import com.catalogo.LojaTenis.model.Modelo;
+import com.catalogo.LojaTenis.modelmapper.ModeloMapper;
 import com.catalogo.LojaTenis.service.ModeloService;
 
 @RestController
-@RequestMapping("/modelo")
-public class ModeloController implements ControllerInterface<Modelo> {
+@RequestMapping("/modelos")
+public class ModeloController implements ControllerInterface<ModeloDTO> {
 
 	@Autowired
 	private ModeloService service;
 	
+	private ModeloMapper mapper;
+	
 	@Override
 	@GetMapping
-	public ResponseEntity<List<Modelo>> getAll(){
-		return ResponseEntity.ok(service.findAll());
+	public ResponseEntity<List<ModeloDTO>> getAll(){
+		return ResponseEntity.ok(mapper.toDTO(service.findAll()));
 	}
 	
 	@Override
@@ -45,19 +54,20 @@ public class ModeloController implements ControllerInterface<Modelo> {
 	
 	@Override
 	@PostMapping
-	public ResponseEntity<Modelo> post(@RequestBody Modelo obj){
+	
+	public ResponseEntity<ModeloDTO> post(@Valid @RequestBody ModeloDTO obj){
 		
-		service.create(obj);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-		
-		return ResponseEntity.created(location).body(obj);
+		Modelo modelo = service.create(mapper.toEntity(obj));
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(modelo.getId())
+				.toUri();
+		return ResponseEntity.created(location).body(mapper.toDTO(modelo));
 	}
 	
 	@Override
 	@PutMapping
-	public ResponseEntity<?> put(@RequestBody Modelo obj){
+	public ResponseEntity<ModeloDTO> put(@Valid @RequestBody ModeloDTO obj){
 		
-		if (service.update(obj)) {
+		if (service.update(mapper.toEntity(obj))) {
 			
 			return ResponseEntity.ok(obj);
 		}

@@ -3,7 +3,11 @@ package com.catalogo.LojaTenis.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,20 +20,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.catalogo.LojaTenis.dto.UsuarioDTO;
+import com.catalogo.LojaTenis.model.Categoria;
 import com.catalogo.LojaTenis.model.Usuario;
+import com.catalogo.LojaTenis.modelmapper.UsuarioMapper;
 import com.catalogo.LojaTenis.service.UsuarioService;
 
 @RestController
-@RequestMapping("/usuario")
-public class UsuarioController implements ControllerInterface<Usuario> {
+@RequestMapping("/usuarios")
+public class UsuarioController implements ControllerInterface<UsuarioDTO> {
 
 	@Autowired
 	private UsuarioService service;
 	
+	private UsuarioMapper mapper;
+	
 	@Override
 	@GetMapping
-	public ResponseEntity<List<Usuario>> getAll(){
-		return ResponseEntity.ok(service.findAll());
+	public ResponseEntity<List<UsuarioDTO>> getAll(){
+		return ResponseEntity.ok(mapper.toDTO(service.findAll()));
 	}
 	
 	@Override
@@ -45,19 +54,19 @@ public class UsuarioController implements ControllerInterface<Usuario> {
 	
 	@Override
 	@PostMapping
-	public ResponseEntity<Usuario> post(@RequestBody Usuario obj){
+	public ResponseEntity<UsuarioDTO> post(@Valid @RequestBody UsuarioDTO obj){
 		
-		service.create(obj);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-		
-		return ResponseEntity.created(location).body(obj);
+		Usuario usuario = service.create(mapper.toEntity(obj));
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(usuario.getId())
+				.toUri();
+		return ResponseEntity.created(location).body(mapper.toDTO(usuario));
 	}
 	
 	@Override
 	@PutMapping
-	public ResponseEntity<?> put(@RequestBody Usuario obj){
+	public ResponseEntity<UsuarioDTO> put(@Valid @RequestBody UsuarioDTO obj){
 		
-		if (service.update(obj)) {
+		if (service.update(mapper.toEntity(obj))) {
 			
 			return ResponseEntity.ok(obj);
 		}

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.catalogo.LojaTenis.model.Categoria;
@@ -26,7 +27,6 @@ public class CategoriaService implements ServiceInterface<Categoria> {
 		return categoria;
 	}
 
-	@Override
 	public List<Categoria> findAll(){
 		return repository.findAll();
 	}

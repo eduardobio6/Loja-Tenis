@@ -1,5 +1,6 @@
 package com.catalogo.LojaTenis.service;
 
+
 import java.util.List;
 
 public interface ServiceInterface<T> {
@@ -9,5 +10,6 @@ public interface ServiceInterface<T> {
 	List<T> findAll();
 	boolean update(T obj);
 	boolean delete(Long id);
+	
 	
 }

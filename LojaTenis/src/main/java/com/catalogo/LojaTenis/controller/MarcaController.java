@@ -3,6 +3,8 @@ package com.catalogo.LojaTenis.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,20 +18,24 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.catalogo.LojaTenis.dto.MarcaDTO;
 import com.catalogo.LojaTenis.model.Marca;
+import com.catalogo.LojaTenis.modelmapper.MarcaMapper;
 import com.catalogo.LojaTenis.service.MarcaService;
 
 @RestController
-@RequestMapping("/marca")
-public class MarcaController implements ControllerInterface<Marca> {
+@RequestMapping("/marcas")
+public class MarcaController implements ControllerInterface<MarcaDTO> {
 
 	@Autowired
 	private MarcaService service;
 	
-	@Override
+	
+	private MarcaMapper mappers;
+	
 	@GetMapping
-	public ResponseEntity<List<Marca>> getAll(){
-		return ResponseEntity.ok(service.findAll());
+	public ResponseEntity<List<MarcaDTO>> getAll(){
+		return ResponseEntity.ok(mappers.toDTO(service.findAll()));
 	}
 	
 	@Override
@@ -45,19 +51,18 @@ public class MarcaController implements ControllerInterface<Marca> {
 	
 	@Override
 	@PostMapping
-	public ResponseEntity<Marca> post(@RequestBody Marca obj){
-		
-		service.create(obj);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-		
-		return ResponseEntity.created(location).body(obj);
+	public ResponseEntity<MarcaDTO> post(@Valid @RequestBody MarcaDTO obj) {
+		Marca marca = service.create(mappers.toEntity(obj));
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(marca.getId())
+				.toUri();
+		return ResponseEntity.created(location).body(mappers.toDTO(marca));
 	}
 	
 	@Override
 	@PutMapping
-	public ResponseEntity<?> put(@RequestBody Marca obj){
+	public ResponseEntity<MarcaDTO> put(@Valid @RequestBody MarcaDTO obj) {
 		
-		if (service.update(obj)) {
+		if (service.update(mappers.toEntity(obj))) {
 			
 			return ResponseEntity.ok(obj);
 		}

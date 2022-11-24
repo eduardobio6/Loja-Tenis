@@ -1,7 +1,15 @@
 package com.catalogo.LojaTenis.model;
 
+import java.util.List;
+
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -9,22 +17,32 @@ import javax.persistence.Table;
 public class Categoria extends AbstractEntity{
 
 	private static final long serialVersionUID = 1L;
+
+	
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	
 	@Column(name = "nm_categoria", length = 50)
-	private String nm_categoria;
+	private String categoria;
 	
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Modelo> modelo;
 	
 	public Categoria() {
 		
 	}
 
-	public String getNm_categoria() {
-		return nm_categoria;
+	public String getCategoria() {
+		return categoria;
 	}
 
-	public void setNm_categoria(String nm_categoria) {
-		this.nm_categoria = nm_categoria;
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
+
+	
+
+	
+	
 	
 	
 	
